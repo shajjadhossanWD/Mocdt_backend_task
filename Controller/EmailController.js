@@ -16,9 +16,9 @@ const sendEmail = async (req, res) => {
     // Check if recipient exists
     const recipientUser = await User.findOne({ email: recipient });
 
-    if (!recipientUser) {
-      return res.status(404).json({ error: 'Recipient not found' });
-    }
+    // if (!recipientUser) {
+    //   return res.status(404).json({ error: 'Recipient not found' });
+    // }
 
     // Send email using nodemailer
     const transporter = nodemailer.createTransport({
